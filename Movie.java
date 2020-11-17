@@ -1,5 +1,4 @@
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -130,10 +129,10 @@ public class Movie {
         }
     }
 
-    public ArrayList<Acteur> tri(){
-        Collections.sort(actors);
-        return actors;
+    // public ArrayList<Acteur> tri(){
+    //     Collections.sort(actors);
+    //     return actors;
 
-    }
+    // }
 
 }

@@ -8,7 +8,7 @@ public class Mean extends Perso{
     }
 
     public String toString() {
-        return "Force : " + darkSide;
+        return "DarkSide : " + darkSide;
     }
 
     public Boolean getDrakSide()
