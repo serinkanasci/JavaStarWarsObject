@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Scanner; 
 
 public class Main {
@@ -75,25 +76,39 @@ public class Main {
         // System.out.println(movie2.toString());
         // System.out.println(movie2.getActors());
 
-        Acteur actor6 = new Acteur("Eddy", "Murphy");
+        Acteur actor6 = new Acteur("Eddy", "Murphy"); 
+        Acteur actor7 = new Acteur("AJamal", "Mixon");
         Perso perso6 = new Perso("Buddy","Love");
         Perso perso7 = new Perso("Papa","Klump");
         Perso perso8 = new Perso("Norbit","Rice");
+        Perso perso9 = new Perso("Ernie","Klump Jr.");
+
         actor6.addPerso(perso6);
         actor6.addPerso(perso7);
         actor6.addPerso(perso8);
+        actor7.addPerso(perso9);
         
         Movie movieTest = new Movie("The Nutty Professor", 1996, 1, 125000, 273961019);
         Movie movieTest2 = new Movie("Norbit", 2007, 1, 545435, 159000000);
 
+        ArrayList<Movie> movies = new ArrayList<Movie>();
+        movies.add(movieTest);
+        movies.add(movieTest2);
+
         movieTest.addActor(actor6);
-        movieTest2.addActor(actor6);
+        movieTest.addActor(actor7);
         movieTest.addPersoActor(perso6, actor6);
         movieTest.addPersoActor(perso7, actor6);
+        movieTest.addPersoActor(perso9, actor7);
+
+
+        movieTest2.addActor(actor6);
         movieTest2.addPersoActor(perso8, actor6);
 
         System.out.println(movieTest.nbPersonnages());
- 
+        System.out.println(movieTest.tri());
+        
+        Movie.makeBackup(movies);
 
     }
 
